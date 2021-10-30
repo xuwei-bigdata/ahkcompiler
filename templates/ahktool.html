@@ -1,0 +1,19 @@
+{% load static %}
+
+{% extend 'base.html' %}
+
+<body onload="brython(1)">
+
+
+{% if use_blockly %}
+<script src="{% static "workspace.js" %}"></script>
+{% endif %}
+
+<script type="text/python">
+
+{% include 'ahktool.py' %}
+
+</script>
+</body>
+
+</html>
